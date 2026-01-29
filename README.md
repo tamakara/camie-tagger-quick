@@ -45,4 +45,4 @@ if 'character' in results:
 ## ⚖️ 开源协议与鸣谢
 
 - **模型来源**：权重由 [Camais03](https://huggingface.co/Camais03) 训练并发布。
-- **本工具库**：基于 **GNU GPL v3** 协议开源。
+- **本工具库**：基于 GNU GPL v3 协议开源。
