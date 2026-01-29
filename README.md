@@ -1,8 +1,6 @@
 # Camie-Tagger-Quick 🚀
 
-针对 [Camais03/camie-tagger-v2](https://huggingface.co/Camais03/camie-tagger-v2) 模型的极简 Python 封装，专注于动漫/插画风格图像的自动打标。
-
-实现真正的“开箱即用”，自动处理模型下载、图像预处理与分类推理。
+针对 [Camais03/camie-tagger-v2](https://huggingface.co/Camais03/camie-tagger-v2) 模型的极简 Python 封装。
 
 ---
 
