@@ -22,7 +22,7 @@ class CamieTagger:
     支持自动下载模型、GPU加速推理以及按类别归纳标签。
     """
 
-    def __init__(self, device: str = "cpu", cache_dir:  Union[str, Path, None] = None, local_only: bool = False):
+    def __init__(self, device: str = "cpu", cache_dir: Union[str, Path, None] = None, local_only: bool = False):
         """
         初始化打标器。
         :param device: 推理设备，可选 "cpu" 或 "cuda"。
@@ -93,12 +93,11 @@ class CamieTagger:
     def _init_session(self, model_path, device):
         """配置并启动 ONNX Runtime"""
         providers = []
-        if ort.get_device() == 'GPU' and device.lower() == 'cuda':
+        if device.lower() == 'cuda':
             providers.append('CUDAExecutionProvider')
-        elif device.lower() == 'cpu':
-            providers.append('CPUExecutionProvider')
-        else:
+        elif device.lower() != 'cpu':
             raise ValueError(f"不支持的设备类型: {device}. 可选 'cpu' 或 'cuda'.")
+        providers.append('CPUExecutionProvider')
 
         try:
             self.session = ort.InferenceSession(model_path, providers=providers)
