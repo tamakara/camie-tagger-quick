@@ -1,6 +1,6 @@
 # Camie-Tagger-Quick 🚀
 
-针对 [Camais03/camie-tagger-v2](https://huggingface.co/Camais03/camie-tagger-v2) 模型的极简 Python 封装。
+针对 [Camais03/camie-tagger-v2](https://huggingface.co/Camais03/camie-tagger-v2) 模型的简单 Python 封装。
 
 ---
 
